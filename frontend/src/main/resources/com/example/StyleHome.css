@@ -1,0 +1,31 @@
+/* Set general background */
+.root {
+    -fx-background-color: #060d06;
+}
+
+/* Text glow effect when clicked */
+.glow-text {
+    -fx-font-size: 3em;
+    -fx-fill: white;
+    -fx-effect: dropshadow(three-pass-box, black, 10, 0.5, 0, 0);
+    -fx-opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/* Change the text glow on click */
+.glow-text:focused, .glow-text:hover {
+    -fx-effect: dropshadow(three-pass-box, yellow, 10, 0.5, 0, 0);
+    -fx-opacity: 0.8;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+    -fx-font-size: 1.2em;
+    -fx-padding: 10px 20px;
+}
+
+.button:hover {
+    -fx-background-color: #a93226;
+}

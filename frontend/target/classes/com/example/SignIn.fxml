@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root prefHeight="800.0" prefWidth="1200.0" stylesheets="@StyleSignIn.css" type="AnchorPane" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SignInController">
+
+    <!-- Background Image -->
+    <ImageView fitHeight="800.0" fitWidth="1200.0" onMouseClicked="#signIn" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <image>
+            <!-- Replace with your actual image path -->
+            <Image url="@com/example/Image/SignIn.png" />
+        </image>
+    </ImageView>
+
+    <!-- Transparent Table / Panel -->
+    <StackPane layoutX="390.0" layoutY="85.0" prefHeight="400.0" prefWidth="420.0">
+
+        <!-- Transparent background box -->
+        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#0d0528AA" height="400.0" stroke="#7B2CFF" strokeWidth="1.5" width="420.0" />
+
+        <!-- Form content -->
+        <VBox maxWidth="355.0" prefWidth="355.0" spacing="14.0">
+            <padding>
+                <Insets bottom="30.0" left="28.0" right="28.0" top="35.0" />
+            </padding>
+
+            <!-- Top line -->
+            <Rectangle fill="#8E63FF" height="1.0" width="350.0" />
+
+            <!-- Email -->
+            <Label styleClass="label" text="EMAIL ADDRESS" />
+            <TextField fx:id="emailField" styleClass="text-field" />
+
+            <!-- Password -->
+            <Label styleClass="label" text="PASSWORD" />
+            <PasswordField fx:id="passwordField" styleClass="password-field" />
+
+            <!-- Sign In Button -->
+            <Button fx:id="signInButton" onMouseClicked="#signInHandle" styleClass="button" text="Sign In" />
+
+            <!-- Error Message -->
+            <Label fx:id="errorMessage" styleClass="error-label" text="Invalid email or password!" visible="false" />
+
+        </VBox>
+    </StackPane>
+
+</fx:root>
